@@ -115,6 +115,7 @@ RUN chmod +x /usr/local/bin/print-banner.sh \
              /etc/s6-overlay/s6-rc.d/init-dpi/run \
              /etc/s6-overlay/s6-rc.d/init-filebot/run \
              /etc/s6-overlay/s6-rc.d/svc-filebot-ready/run \
+             /etc/s6-overlay/s6-rc.d/svc-filebot-amc/run \
              /defaults/autostart \
              /defaults/startwm.sh
 

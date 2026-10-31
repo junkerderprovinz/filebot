@@ -59,8 +59,9 @@ If it has earned a place on your server or computer, toss a coin to your knight:
 2. [What it does](#2-what-it-does)
 3. [Getting started](#3-getting-started)
 4. [Your FileBot license](#4-your-filebot-license)
-5. [How AI is used here](#5-how-ai-is-used-here)
-6. [Support this project](#6-support-this-project)
+5. [Automatic mode](#5-automatic-mode)
+6. [How AI is used here](#6-how-ai-is-used-here)
+7. [Support this project](#7-support-this-project)
 
 <br>
 
@@ -85,6 +86,7 @@ If it has earned a place on your server or computer, toss a coin to your knight:
 - **Dark from the first start.** FileBot opens in its Darcula theme, and the file dialogs follow. For another theme, set `net.filebot.theme` in `/config/filebot/system.properties`, or `FILEBOT_THEME` before the first start.
 - **The whole tab for FileBot.** The main window fills the browser tab without a title bar of its own. Dialogs keep theirs, open at their own size, and the file dialogs begin in `/storage`, the folder you map your media to.
 - **Titles in your language.** FileBot's own interface is English only, but episode and movie titles come in whatever language you pick in its language menu, German included.
+- **An automatic mode if you want one.** FileBot's amc script can watch a folder and sort new movies, shows and music into your library on its own, see [Automatic mode](#5-automatic-mode).
 - **Back on its own.** Close FileBot by accident and it starts again within a few seconds, without a container restart.
 - **Nothing lost on updates.** Your license, settings, history and cache live under `/config/filebot`.
 
@@ -123,7 +125,17 @@ If you move over from another FileBot container, copy its `license.psm` into `/c
 
 <br>
 
-## 5. How AI is used here
+## 5. Automatic mode
+
+Set `AMC_ENABLED=1` and the container runs FileBot's [amc script](https://www.filebot.net/amc.html) on a watch folder every `AMC_INTERVAL` seconds (1800 by default). New movies, shows and music are matched and sorted into the output folder, in Movies, TV Shows, Anime and Music folders. A round waits while anything in the watch folder changed within the last `AMC_INPUT_STABLE_TIME` seconds, so a download that is still running is left alone.
+
+The watch folder is `/watch` and the output `/output`, or any path under `/storage` through `AMC_INPUT_DIR` and `AMC_OUTPUT_DIR`. `AMC_ACTION` starts at `test`, which only writes the plan into `/config/filebot/amc.log`. Read it once, then switch to `move`, `copy` or `hardlink`. amc needs your license for every action, the test run included.
+
+The other settings carry the same names as in jlesage/filebot (`AMC_LANG`, `AMC_CONFLICT`, `AMC_MATCH_MODE`, `AMC_ARTWORK`, `AMC_SUBTITLE_LANG`, the four `AMC_*_FORMAT` and `AMC_CUSTOM_OPTIONS`), so a template moved over from there keeps working. Files already handled are listed in `/config/filebot/amc-exclude.txt` and skipped on later rounds.
+
+<br>
+
+## 6. How AI is used here
 
 One knight builds this, and AI is one of the tools I work with, the same way I work with an editor or a compiler. It helps me write code and documentation and it checks my work, and that saves me a good many evenings. It does not make the decisions, though. I read and understand everything before it ships, and if something here breaks, that is on me and not on the tool.
 
@@ -131,7 +143,7 @@ You do not have to take my word for it. The code is open and every release note 
 
 <br>
 
-## 6. Support this project
+## 7. Support this project
 
 Questions, bugs, ideas or feature requests? Please [open a GitHub issue](https://github.com/junkerderprovinz/filebot/issues). A question about FileBot itself, its formats or its license is best asked in the [FileBot forum](https://www.filebot.net/forums/).
 
