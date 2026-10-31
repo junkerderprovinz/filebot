@@ -83,7 +83,8 @@ If it has earned a place on your server or computer, toss a coin to your knight:
 - **The real program.** This is the FileBot desktop app itself, installed unmodified from FileBot's own package repository and updated with every weekly build. Rename, Episodes, Subtitles, SFV, Filter and List all work as they do on a desktop.
 - **Everything FileBot needs to match well.** MediaInfo, chromaprint for AcoustID music matching, 7-Zip and unrar for archives, mkvtoolnix, AtomicParsley and ffmpeg come along, the same helpers the official FileBot images carry.
 - **Dark from the first start.** FileBot opens in its Darcula theme, and the file dialogs follow. For another theme, set `net.filebot.theme` in `/config/filebot/system.properties`, or `FILEBOT_THEME` before the first start.
-- **Dialogs that start where your media is.** Open and save dialogs begin in `/storage`, the folder you map your media to.
+- **The whole tab for FileBot.** The main window fills the browser tab without a title bar of its own. Dialogs keep theirs, open at their own size, and the file dialogs begin in `/storage`, the folder you map your media to.
+- **Titles in your language.** FileBot's own interface is English only, but episode and movie titles come in whatever language you pick in its language menu, German included.
 - **Back on its own.** Close FileBot by accident and it starts again within a few seconds, without a container restart.
 - **Nothing lost on updates.** Your license, settings, history and cache live under `/config/filebot`.
 

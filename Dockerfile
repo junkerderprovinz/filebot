@@ -92,11 +92,13 @@ RUN set -eux; \
 
 # The base's openbox maximises every window, which suits the main window but
 # blows FileBot's dialogs and the zenity file dialog up to full screen. A later
-# rule wins in openbox, so these go after the base's catch-all.
+# rule wins in openbox, so these go after the base's catch-all. The main window
+# also loses its title bar, since the browser tab already names it; dialogs
+# keep theirs so they can be moved and closed.
 RUN set -eux; \
     rc=/etc/xdg/openbox/rc.xml; \
     grep -q '<application class="\*"><maximized>yes</maximized></application>' "$rc"; \
-    sed -i 's|</applications>|  <application type="dialog"><maximized>no</maximized></application>\n  <application class="zenity"><maximized>no</maximized><size><width>1100</width><height>700</height></size><position force="yes"><x>center</x><y>center</y></position></application>\n</applications>|' "$rc"
+    sed -i 's|</applications>|  <application type="dialog"><maximized>no</maximized></application>\n  <application class="zenity"><maximized>no</maximized><size><width>1100</width><height>700</height></size><position force="yes"><x>center</x><y>center</y></position></application>\n  <application class="net-filebot-Main" type="normal"><decor>no</decor></application>\n</applications>|' "$rc"
 
 # Init-log banner: single source at .github/assets/banner-raw.txt (CR stripped
 # so a Windows checkout can't break it). Also blank the base's own adduser
