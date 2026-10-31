@@ -1,0 +1,58 @@
+#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+# Seeds the openbox session and FileBot's data folder, and activates a license
+# file the user dropped into the appdata folder.
+set -e
+
+log() { echo "[init-filebot] $*"; }
+
+mkdir -p /run/s6/container_environment
+set_env() { printf "%s" "$2" > "/run/s6/container_environment/$1"; }
+
+set_env XDG_CONFIG_HOME  "/config/.config"
+set_env XDG_DATA_HOME    "/config/.local/share"
+set_env XDG_CACHE_HOME   "/config/.cache"
+
+# init-selkies-config copies the autostart only on first run, so it is copied
+# again on every start to carry an image update's launch command.
+mkdir -p /config/.config/openbox
+cp -af /defaults/autostart /config/.config/openbox/autostart
+chmod 0755 /config/.config/openbox/autostart
+
+APP_DATA=/config/filebot
+mkdir -p "${APP_DATA}" /config/.config /config/.local/share /config/.cache
+
+# Dark by default. The file is seeded once, so a theme changed in it by hand
+# survives restarts and image updates.
+if [[ ! -f "${APP_DATA}/system.properties" ]]; then
+    printf 'net.filebot.theme=%s\n' "${FILEBOT_THEME:-Darcula}" > "${APP_DATA}/system.properties"
+fi
+
+gtk_settings=/config/.config/glib-2.0/settings/keyfile
+if [[ ! -f "${gtk_settings}" ]]; then
+    mkdir -p "$(dirname "${gtk_settings}")"
+    printf "[org/gtk/gtk4/settings/file-chooser]\nstartup-mode='cwd'\n" > "${gtk_settings}"
+fi
+
+chown -R abc:abc "${APP_DATA}" /config/.config /config/.local /config/.cache 2>/dev/null || true
+
+# A license.txt placed next to the filebot folder is activated once and then
+# renamed, so a key that is already active is not sent to FileBot's server on
+# every start.
+if [[ -f /config/license.txt ]]; then
+    log "activating /config/license.txt"
+    if s6-setuidgid abc env HOME=/config /usr/local/bin/filebot --license /config/license.txt; then
+        mv -f /config/license.txt /config/license.txt.activated
+    else
+        log "activation failed, license.txt stays in place for the next start"
+    fi
+fi
+
+if [[ -f "${APP_DATA}/license.psm" ]]; then
+    log "license file present"
+else
+    log "no license yet: put license.txt into the appdata folder, or click Rename in FileBot and paste the key"
+fi
+
+log "init-filebot done"
+exit 0

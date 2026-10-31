@@ -1,0 +1,23 @@
+#!/bin/sh
+# Runs the packaged /usr/bin/filebot with its data under /config/filebot, for
+# the desktop session and for `docker exec` alike, so `filebot --license` from
+# a shell activates the same license the GUI reads.
+#
+# The packaged launcher passes FILEBOT_OPTS after its own -D flags, and the
+# JVM keeps the last value of a repeated property, so these win over the
+# package defaults while a user's FILEBOT_OPTS still wins over these.
+
+APP_DATA="/config/filebot"
+
+export FILEBOT_OPTS="\
+ -Dapplication.deployment=docker\
+ -Dapplication.update=skip\
+ -Dapplication.dir=${APP_DATA}\
+ -Dapplication.cache=${APP_DATA}/cache\
+ -Dnet.filebot.license=${APP_DATA}/license.psm\
+ -Dnet.filebot.util.prefs.sync=true\
+ -Dnet.filebot.UserFiles.fileChooser=Zenity\
+ -DuseGVFS=false\
+ ${FILEBOT_OPTS:-}"
+
+exec /usr/bin/filebot "$@"

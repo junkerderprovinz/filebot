@@ -1,0 +1,33 @@
+#!/bin/sh
+# openbox runs this with /bin/sh (dash) whatever the shebang says, and dash
+# silently skips bashisms such as [[ ]] and arrays.
+#
+# The launch below must not be an `exec`. openbox keeps running when this
+# script ends, so the base image's svc-watchdog, enabled by RESTART_APP in the
+# Dockerfile, restarts the app by watching for
+#
+#     pgrep -o -u abc -f "sh $HOME/.config/openbox/autostart"
+#
+# and `exec` replaces this process, so that pattern stops matching and a closed
+# FileBot stays closed on an empty black desktop.
+
+# Pin the XDG dirs to the persistent /config tree for every PUID (under PUID=0
+# the session runs as literal root, whose default HOME differs from abc's).
+export XDG_CONFIG_HOME="/config/.config"
+export XDG_DATA_HOME="/config/.local/share"
+export XDG_CACHE_HOME="/config/.cache"
+
+# FileBot's file dialogs are zenity, a libadwaita app that ignores GTK_THEME
+# and only follows the desktop's colour scheme preference, which openbox
+# never sets.
+export ADW_DEBUG_COLOR_SCHEME="${ADW_DEBUG_COLOR_SCHEME:-prefer-dark}"
+
+# There is no dconf in the image, so GTK reads its settings from the keyfile
+# init-filebot seeds. It opens the file dialog in the working directory, which
+# is the media share, instead of on the empty Recent list.
+export GSETTINGS_BACKEND=keyfile
+cd /storage 2>/dev/null || cd /config || exit 1
+
+echo "[filebot-autostart] launching FileBot" >&2
+
+dbus-launch --exit-with-session /usr/local/bin/filebot

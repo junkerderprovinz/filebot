@@ -1,0 +1,37 @@
+NOTICE: Bundled Software in the FileBot Unraid Container Image
+==============================================================
+
+The GNU Affero General Public License v3.0 (AGPL-3.0, see LICENSE) covers ONLY the wrapper assets in this
+repository:
+  * Dockerfile and rootfs/ overlay
+  * Helper scripts under rootfs/usr/local/bin/
+  * Unraid container template (maintained in the junkerderprovinz/unraid-apps repo)
+  * README and banner artwork
+
+It does NOT relicense any software shipped inside the resulting container
+image. Each bundled component retains its upstream license:
+
+  * FileBot                      Commercial license by Reinhard Pointner
+                                 https://www.filebot.net/
+                                 (installed unmodified from the official FileBot
+                                 apt repository at build time; no license key is
+                                 included, each user activates their own)
+  * LinuxServer.io baseimage-selkies
+                                 GPL-3.0
+                                 https://github.com/linuxserver/docker-baseimage-selkies
+  * OpenJDK                      GPL-2.0 with the Classpath Exception
+  * MediaInfo                    BSD-2-Clause
+                                 (installed from MediaArea's apt repository)
+  * Chromaprint, 7-Zip, unrar, mkvtoolnix, AtomicParsley, FFmpeg, zenity
+                                 their own licenses (LGPL, GPL, the unRAR
+                                 license); see the Ubuntu packages for details
+  * Fonts (Noto, DejaVu)         various open licenses (OFL, Bitstream Vera)
+
+The FileBot name and logo belong to their owner. They are used here only to
+name the application this image packages, and the README banner and the
+container icon show the logo unmodified. This project is not affiliated with
+or endorsed by FileBot.
+
+When you run, redistribute or rebuild the resulting container image, you must
+comply with the licenses of all bundled components in addition to the AGPL-3.0
+license that covers this repository.
