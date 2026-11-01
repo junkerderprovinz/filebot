@@ -19,8 +19,10 @@ Size and corner radius are the Buy Me a Coffee button's (841.9 by 245.3, rx
 38.2), so every button on the page has the same shape.
 
 The logos are the platforms' own marks from Font Awesome Free (CC BY 4.0 for the
-icons), Vivaldi's and F-Droid's from Simple Icons, and Unraid's from Dashboard
-Icons (Apache-2.0); see scripts/brand-paths/. The companions carry their own
+icons), Vivaldi's from Simple Icons, F-Droid's from its 2015 logo in
+gitlab.com/fdroid/artwork (CC BY-SA 3.0 or GPL-3.0-or-later) with the eyes,
+ring and F cut out, and Unraid's from Dashboard Icons (Apache-2.0); see
+scripts/brand-paths/. The companions carry their own
 logos. Every mark is drawn in the button's one ink.
 Each is a trademark of its owner, used unmodified and only to name the platform
 a button downloads for, with no claim of endorsement by or affiliation with its
@@ -90,6 +92,12 @@ KINDS = {
     # enough for type this large.
     "unraid":           (0, "unraid", "#f15a2c", "#ffffff", "Unraid", "Template", "Install from Unraid's Community Applications"),
     "unraid-plugin":    (0, "unraid", "#f15a2c", "#ffffff", "Unraid", "Plugin", "Install the plugin from Unraid's Community Applications"),
+    # The green of MOS's mark, where white holds 3.2:1, about as much as on Unraid's orange.
+    "mos":              (0, "mos", "#26a269", "#ffffff", "MOS", "Hub", "Install from the MOS Hub"),
+    # The light tile ZimaOS sets its black mark on.
+    "zimaos":           (0, "zimaos", "#f4f4f4", "#1b1b1b", "ZimaOS", "Community store", "Install from the ZimaOS and CasaOS store"),
+    # The tile Dashboard Icons sets Umbrel's mark on.
+    "umbrel":           (0, "umbrel", "#5351f3", "#ffffff", "Umbrel", "Community store", "Install from the umbrelOS community app store"),
     "docker":           (0, "docker", "#1d63ed", "#ffffff", "Docker", "Container", "Run it with Docker"),
     "compose":          (0, "docker", "#1d63ed", "#ffffff", "Docker", "compose file", "Download the docker-compose file"),
     # Slate, since GitHub's black vanishes in the dark theme.
@@ -104,6 +112,8 @@ KINDS = {
     "windows-script":   (1, "windows", *WINDOWS, "Windows", "start script", "Download the Windows start script"),
     # Space grey, since black vanishes against GitHub's dark theme.
     "macos":            (1, "apple", "#6e6e73", "#ffffff", "macOS", "Universal", "Download for macOS"),
+    # For apps that ship Intel and Apple silicon as two files.
+    "macos-split":      (1, "apple", "#6e6e73", "#ffffff", "macOS", "Intel, ARM", "Download for macOS on Intel or Apple silicon"),
     # Tux yellow, with dark ink for contrast.
     "linux":            (1, "linux", "#fcc624", "#1b1b1b", "Linux", "x64", "Download for Linux"),
     "linux-arm":        (1, None, "#fcc624", "#1b1b1b", "Linux", "ARM64", "Download for Linux on ARM"),
@@ -112,6 +122,8 @@ KINDS = {
     "google-play":      (2, "google-play", "#01875f", "#ffffff", "Android", "Google Play", "Get it on Google Play"),
     "f-droid":          (2, "f-droid", "#1976d2", "#ffffff", "Android", "F-Droid", "Get it on F-Droid"),
     "apk":              (2, "android", "#3ddc84", "#1b1b1b", "Android", "APK", "Download the Android app"),
+    # The App Store's blue, where white holds 3.1:1.
+    "app-store":        (2, "apple", "#0d96f6", "#ffffff", "iOS", "App Store", "Download on the App Store"),
     # One button per browser, in the colours of KnightLoader's browser tiles.
     # White holds 3.3:1 on Brave's orange, about as much as on Unraid's, and
     # more on the others. On Firefox's lighter orange it falls to 2.7:1, so
@@ -138,8 +150,9 @@ SOON = {
     "unraid-plugin": ("coming soon", "In Unraid's Community Applications soon"),
 }
 # Links that may lead away from the repository.
-STORES = ("play.google.com", "f-droid.org", "chromewebstore.google.com", "addons.mozilla.org", "microsoftedge.microsoft.com",
-          "unraid.net", "github.com/junkerderprovinz/parleyport", "github.com/junkerderprovinz/bombvault-widget")
+STORES = ("play.google.com", "f-droid.org", "apps.apple.com","chromewebstore.google.com", "addons.mozilla.org", "microsoftedge.microsoft.com",
+          "unraid.net", "mos-official.net", "github.com/junkerderprovinz/zimaos-apps", "github.com/junkerderprovinz/umbrel-apps",
+          "github.com/junkerderprovinz/parleyport", "github.com/junkerderprovinz/bombvault-widget")
 
 # The sheen is a tilted white band, clipped to each button, that appears to
 # travel along the whole row, the same band as the donation row's. Its numbers

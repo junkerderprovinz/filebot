@@ -23,11 +23,18 @@ This runs the full FileBot desktop app inside a single container and streams it 
 
 <!-- download-buttons: written by scripts/gen_download_buttons.py -->
 <p align="center">
-  <a href="https://ca.unraid.net/apps?q=filebot"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=a82cc8264e34#svgView(viewBox(0,0,841.9,245.3))" alt="Install from Unraid&#x27;s Community Applications" width="160" height="46.618"></a>
+  <a href="https://ca.unraid.net/apps?q=filebot"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=977e0b9ec7fb#svgView(viewBox(0,0,841.9,245.3))" alt="Install from Unraid&#x27;s Community Applications" width="160" height="46.618"></a>
   &nbsp;
-  <a href="https://hub.docker.com/r/junkerderprovinz/filebot/"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=a82cc8264e34#svgView(viewBox(866,0,841.9,245.3))" alt="Run it with Docker" width="160" height="46.618"></a>
+  <a href="https://mos-official.net/apps.html?search=FileBot"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=977e0b9ec7fb#svgView(viewBox(866,0,841.9,245.3))" alt="Install from the MOS Hub" width="160" height="46.618"></a>
   &nbsp;
-  <a href="https://github.com/junkerderprovinz/filebot/releases/latest"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=a82cc8264e34#svgView(viewBox(1732,0,841.9,245.3))" alt="Download the source archive" width="160" height="46.618"></a>
+  <a href="https://github.com/junkerderprovinz/zimaos-apps#install"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=977e0b9ec7fb#svgView(viewBox(1732,0,841.9,245.3))" alt="Install from the ZimaOS and CasaOS store" width="160" height="46.618"></a>
+  &nbsp;
+  <a href="https://github.com/junkerderprovinz/umbrel-apps#install"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=977e0b9ec7fb#svgView(viewBox(2598,0,841.9,245.3))" alt="Install from the umbrelOS community app store" width="160" height="46.618"></a>
+</p>
+<p align="center">
+  <a href="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/compose.yaml"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=977e0b9ec7fb#svgView(viewBox(3464,0,841.9,245.3))" alt="Download the docker-compose file" width="160" height="46.618"></a>
+  &nbsp;
+  <a href="https://github.com/junkerderprovinz/filebot/releases/latest"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=977e0b9ec7fb#svgView(viewBox(4330,0,841.9,245.3))" alt="Download the source archive" width="160" height="46.618"></a>
 </p>
 <!-- /download-buttons -->
 
@@ -43,11 +50,11 @@ If it has earned a place on your server or computer, toss a coin to your knight:
 
 <!-- give-buttons: written by scripts/gen_download_buttons.py -->
 <p align="center">
-  <a href="https://buymeacoffee.com/junkerderprovinz"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=a82cc8264e34#svgView(viewBox(2598,0,841.9,245.3))" alt="Buy me a coffee" width="160" height="46.618"></a>
+  <a href="https://buymeacoffee.com/junkerderprovinz"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=977e0b9ec7fb#svgView(viewBox(5196,0,841.9,245.3))" alt="Buy me a coffee" width="160" height="46.618"></a>
   &nbsp;
-  <a href="https://www.paypal.com/donate/?hosted_button_id=76FVV52TKXTUS"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=a82cc8264e34#svgView(viewBox(3464,0,841.9,245.3))" alt="PayPal" width="160" height="46.618"></a>
+  <a href="https://www.paypal.com/donate/?hosted_button_id=76FVV52TKXTUS"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=977e0b9ec7fb#svgView(viewBox(6062,0,841.9,245.3))" alt="PayPal" width="160" height="46.618"></a>
   &nbsp;
-  <a href="https://junkerderprovinz.github.io/junkerderprovinz/"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=a82cc8264e34#svgView(viewBox(4330,0,841.9,245.3))" alt="Donate with crypto" width="160" height="46.618"></a>
+  <a href="https://junkerderprovinz.github.io/junkerderprovinz/"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=977e0b9ec7fb#svgView(viewBox(6928,0,841.9,245.3))" alt="Donate with crypto" width="160" height="46.618"></a>
 </p>
 <!-- /give-buttons -->
 
@@ -109,6 +116,16 @@ Then open `https://<server>:3001` and accept the self-signed certificate once. Y
 > [!NOTE]
 > The WebUI has no login by default, for use on a trusted LAN. Set `CUSTOM_USER` and `PASSWORD` to turn on the built-in login, and never expose the WebUI to the internet without a VPN or an authenticating reverse proxy in front.
 
+### Other Docker hosts
+
+[compose.yaml](compose.yaml) runs FileBot on any Linux server with Docker. Put it in a folder of its own, point the folders under `volumes` at your files and start it with `docker compose up -d`. The folders are created next to the file.
+
+- **Synology:** in Container Manager, create a project from the file (DSM 7.2 or newer).
+- **Proxmox:** run it in a VM or an LXC container that has Docker.
+- **MOS:** install FileBot from the [MOS Hub](https://mos-official.net/apps.html?search=FileBot).
+- **ZimaOS and CasaOS:** add the [community store](https://github.com/junkerderprovinz/zimaos-apps#install) and install FileBot from it.
+- **umbrelOS:** add the [community app store](https://github.com/junkerderprovinz/umbrel-apps#install) and install FileBot from it.
+
 <br>
 
 ## 4. Your FileBot license
@@ -153,11 +170,11 @@ If it has earned a place on your server or computer, toss a coin to your knight:
 
 <!-- give-buttons: written by scripts/gen_download_buttons.py -->
 <p align="center">
-  <a href="https://buymeacoffee.com/junkerderprovinz"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=a82cc8264e34#svgView(viewBox(2598,0,841.9,245.3))" alt="Buy me a coffee" width="160" height="46.618"></a>
+  <a href="https://buymeacoffee.com/junkerderprovinz"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=977e0b9ec7fb#svgView(viewBox(5196,0,841.9,245.3))" alt="Buy me a coffee" width="160" height="46.618"></a>
   &nbsp;
-  <a href="https://www.paypal.com/donate/?hosted_button_id=76FVV52TKXTUS"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=a82cc8264e34#svgView(viewBox(3464,0,841.9,245.3))" alt="PayPal" width="160" height="46.618"></a>
+  <a href="https://www.paypal.com/donate/?hosted_button_id=76FVV52TKXTUS"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=977e0b9ec7fb#svgView(viewBox(6062,0,841.9,245.3))" alt="PayPal" width="160" height="46.618"></a>
   &nbsp;
-  <a href="https://junkerderprovinz.github.io/junkerderprovinz/"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=a82cc8264e34#svgView(viewBox(4330,0,841.9,245.3))" alt="Donate with crypto" width="160" height="46.618"></a>
+  <a href="https://junkerderprovinz.github.io/junkerderprovinz/"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=977e0b9ec7fb#svgView(viewBox(6928,0,841.9,245.3))" alt="Donate with crypto" width="160" height="46.618"></a>
 </p>
 <!-- /give-buttons -->
 
