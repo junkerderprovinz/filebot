@@ -12,7 +12,7 @@
 #
 # ubunturesolute is Ubuntu 26.04, the release the official FileBot images are
 # built on, so the package set below matches theirs.
-ARG BASE_TAG=ubunturesolute@sha256:62331d22f597a374be78a2ef593ca0c685bc6e1e080080d082e96a85286f6300
+ARG BASE_TAG=ubunturesolute@sha256:6efa3fd775a552938d862f75975d34c418ad26d028ba2c952da58682cfe1cb47
 FROM ghcr.io/linuxserver/baseimage-selkies:${BASE_TAG}
 
 LABEL maintainer="junkerderprovinz"
