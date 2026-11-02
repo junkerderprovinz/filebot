@@ -7,7 +7,7 @@
 
 services:
   filebot:
-    image: junkerderprovinz/filebot:latest
+    image: junkerderprovinz/filebot:latest@sha256:c8685f7702f519fb08024bba34cfd6b1ac547a77221faa440b7a720fae1bdcfc
     container_name: filebot
     restart: unless-stopped
     shm_size: 1gb
