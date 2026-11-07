@@ -21,27 +21,46 @@
 This runs the full FileBot desktop app inside a single container and streams it to your browser over <a href="https://github.com/selkies-project/selkies">Selkies</a> (H.264 video), so scrolling through a season's worth of files and dragging them around feels like a local window.
 </p>
 
+<br>
+
+<p><a id="table-of-contents" href="#table-of-contents"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/assets/sections/table-of-contents-dark.svg"><img src=".github/assets/sections/table-of-contents.svg" alt="Table of Contents" width="100%"></picture></a></p>
+
+1. [Download](#1-download)
+2. [Support](#2-support)
+3. [What it looks like](#3-what-it-looks-like)
+4. [What it does](#4-what-it-does)
+5. [Getting started](#5-getting-started)
+6. [Your FileBot license](#6-your-filebot-license)
+7. [Automatic mode](#7-automatic-mode)
+8. [How AI is used here](#8-how-ai-is-used-here)
+
+<br>
+
+<p><a id="1-download" href="#1-download"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/assets/sections/1-download-dark.svg"><img src=".github/assets/sections/1-download.svg" alt="1. Download" width="100%"></picture></a></p>
+
 <!-- download-buttons: written by scripts/gen_download_buttons.py -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=074d32ddf165#svgView(viewBox(0,0,841.9,245.3))" alt="Server" width="160" height="46.618">
+  <picture><source media="(prefers-color-scheme: dark)" srcset=".github/assets/sections/group-server-dark.svg"><img src=".github/assets/sections/group-server.svg" alt="Server" width="100%"></picture>
 </p>
 <p align="center">
-  <a href="https://ca.unraid.net/apps?q=filebot"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=074d32ddf165#svgView(viewBox(866,0,841.9,245.3))" alt="Install from Unraid&#x27;s Community Applications" width="160" height="46.618"></a>
+  <a href="https://ca.unraid.net/apps?q=filebot"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=509c6fbfa82d#svgView(viewBox(0,0,841.9,245.3))" alt="Install from Unraid&#x27;s Community Applications" width="160" height="46.618"></a>
   &nbsp;
-  <a href="https://mos-official.net/apps.html?search=FileBot"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=074d32ddf165#svgView(viewBox(1732,0,841.9,245.3))" alt="Install from the MOS Hub" width="160" height="46.618"></a>
+  <a href="https://mos-official.net/apps.html?search=FileBot"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=509c6fbfa82d#svgView(viewBox(866,0,841.9,245.3))" alt="Install from the MOS Hub" width="160" height="46.618"></a>
   &nbsp;
-  <a href="https://github.com/junkerderprovinz/zimaos-apps#install"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=074d32ddf165#svgView(viewBox(2598,0,841.9,245.3))" alt="Install from the ZimaOS and CasaOS store" width="160" height="46.618"></a>
+  <a href="https://github.com/junkerderprovinz/zimaos-apps#install"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=509c6fbfa82d#svgView(viewBox(1732,0,841.9,245.3))" alt="Install from the ZimaOS and CasaOS store" width="160" height="46.618"></a>
   &nbsp;
-  <a href="https://github.com/junkerderprovinz/umbrel-apps#install"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=074d32ddf165#svgView(viewBox(3464,0,841.9,245.3))" alt="Install from the umbrelOS community app store" width="160" height="46.618"></a>
+  <a href="https://github.com/junkerderprovinz/umbrel-apps#install"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=509c6fbfa82d#svgView(viewBox(2598,0,841.9,245.3))" alt="Install from the umbrelOS community app store" width="160" height="46.618"></a>
 </p>
 <p align="center">
-  <a href="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/compose.yaml"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=074d32ddf165#svgView(viewBox(4330,0,841.9,245.3))" alt="Download the docker-compose file" width="160" height="46.618"></a>
+  <a href="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/compose.yaml"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=509c6fbfa82d#svgView(viewBox(3464,0,841.9,245.3))" alt="Download the docker-compose file" width="160" height="46.618"></a>
   &nbsp;
-  <a href="https://github.com/junkerderprovinz/filebot/releases/latest"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=074d32ddf165#svgView(viewBox(5196,0,841.9,245.3))" alt="Download the source archive" width="160" height="46.618"></a>
+  <a href="https://github.com/junkerderprovinz/filebot/releases/latest"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=509c6fbfa82d#svgView(viewBox(4330,0,841.9,245.3))" alt="Download the source archive" width="160" height="46.618"></a>
 </p>
 <!-- /download-buttons -->
 
 <br>
+
+<p><a id="2-support" href="#2-support"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/assets/sections/2-support-dark.svg"><img src=".github/assets/sections/2-support.svg" alt="2. Support" width="100%"></picture></a></p>
 
 <p align="center">
 A one-knight job: I build it, keep it running, work through the issues and add what people ask for, until nothing is missing. It is free, with no accounts, no telemetry, no ads and no paid tier. No asterisk anywhere. Nothing readable ever leaves your own walls. Forged on evenings and weekends, with heart and stubbornness.
@@ -53,29 +72,17 @@ If it has earned a place on your server or computer, toss a coin to your knight:
 
 <!-- give-buttons: written by scripts/gen_download_buttons.py -->
 <p align="center">
-  <a href="https://buymeacoffee.com/junkerderprovinz"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=074d32ddf165#svgView(viewBox(6062,0,841.9,245.3))" alt="Buy me a coffee" width="160" height="46.618"></a>
+  <a href="https://buymeacoffee.com/junkerderprovinz"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=509c6fbfa82d#svgView(viewBox(5196,0,841.9,245.3))" alt="Buy me a coffee" width="160" height="46.618"></a>
   &nbsp;
-  <a href="https://www.paypal.com/donate/?hosted_button_id=76FVV52TKXTUS"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=074d32ddf165#svgView(viewBox(6928,0,841.9,245.3))" alt="PayPal" width="160" height="46.618"></a>
+  <a href="https://www.paypal.com/donate/?hosted_button_id=76FVV52TKXTUS"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=509c6fbfa82d#svgView(viewBox(6062,0,841.9,245.3))" alt="PayPal" width="160" height="46.618"></a>
   &nbsp;
-  <a href="https://junkerderprovinz.github.io/junkerderprovinz/"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=074d32ddf165#svgView(viewBox(7794,0,841.9,245.3))" alt="Donate with crypto" width="160" height="46.618"></a>
+  <a href="https://junkerderprovinz.github.io/junkerderprovinz/"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=509c6fbfa82d#svgView(viewBox(6928,0,841.9,245.3))" alt="Donate with crypto" width="160" height="46.618"></a>
 </p>
 <!-- /give-buttons -->
 
 <br>
 
-## Table of Contents
-
-1. [What it looks like](#1-what-it-looks-like)
-2. [What it does](#2-what-it-does)
-3. [Getting started](#3-getting-started)
-4. [Your FileBot license](#4-your-filebot-license)
-5. [Automatic mode](#5-automatic-mode)
-6. [How AI is used here](#6-how-ai-is-used-here)
-7. [Support this project](#7-support-this-project)
-
-<br>
-
-## 1. What it looks like
+<p><a id="3-what-it-looks-like" href="#3-what-it-looks-like"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/assets/sections/3-what-it-looks-like-dark.svg"><img src=".github/assets/sections/3-what-it-looks-like.svg" alt="3. What it looks like" width="100%"></picture></a></p>
 
 <p align="center">
   <img src=".github/assets/screenshots/filebot-1.png" alt="FileBot's Rename panel in a browser window: six badly named episode files on the left, matched to their proper titles from TheMovieDB on the right" width="100%">
@@ -89,7 +96,7 @@ If it has earned a place on your server or computer, toss a coin to your knight:
 
 <br>
 
-## 2. What it does
+<p><a id="4-what-it-does" href="#4-what-it-does"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/assets/sections/4-what-it-does-dark.svg"><img src=".github/assets/sections/4-what-it-does.svg" alt="4. What it does" width="100%"></picture></a></p>
 
 - **The real program.** This is the FileBot desktop app itself, installed unmodified from FileBot's own package repository and updated with every weekly build. Rename, Episodes, Subtitles, SFV, Filter and List all work as they do on a desktop.
 - **Everything FileBot needs to match well.** MediaInfo, chromaprint for AcoustID music matching, 7-Zip and unrar for archives, mkvtoolnix, AtomicParsley and ffmpeg come along, the same helpers the official FileBot images carry.
@@ -102,7 +109,7 @@ If it has earned a place on your server or computer, toss a coin to your knight:
 
 <br>
 
-## 3. Getting started
+<p><a id="5-getting-started" href="#5-getting-started"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/assets/sections/5-getting-started-dark.svg"><img src=".github/assets/sections/5-getting-started.svg" alt="5. Getting started" width="100%"></picture></a></p>
 
 On Unraid, install **FileBot** from [Community Applications](https://ca.unraid.net/apps?q=filebot). Anywhere else, one container is enough:
 
@@ -131,7 +138,7 @@ Then open `https://<server>:3001` and accept the self-signed certificate once. Y
 
 <br>
 
-## 4. Your FileBot license
+<p><a id="6-your-filebot-license" href="#6-your-filebot-license"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/assets/sections/6-your-filebot-license-dark.svg"><img src=".github/assets/sections/6-your-filebot-license.svg" alt="6. Your FileBot license" width="100%"></picture></a></p>
 
 FileBot is commercial software by Reinhard Pointner, and renaming needs a license from [filebot.net](https://www.filebot.net/purchase.html). This image ships none. It installs FileBot as it comes, and you bring your own key, the same as on a desktop.
 
@@ -145,7 +152,7 @@ If you move over from another FileBot container, copy its `license.psm` into `/c
 
 <br>
 
-## 5. Automatic mode
+<p><a id="7-automatic-mode" href="#7-automatic-mode"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/assets/sections/7-automatic-mode-dark.svg"><img src=".github/assets/sections/7-automatic-mode.svg" alt="7. Automatic mode" width="100%"></picture></a></p>
 
 Set `AMC_ENABLED=1` and the container runs FileBot's [amc script](https://www.filebot.net/amc.html) on a watch folder every `AMC_INTERVAL` seconds (1800 by default). New movies, shows and music are matched and sorted into the output folder, in Movies, TV Shows, Anime and Music folders. A round waits while anything in the watch folder changed within the last `AMC_INPUT_STABLE_TIME` seconds, so a download that is still running is left alone.
 
@@ -155,7 +162,7 @@ The other settings carry the same names as in jlesage/filebot (`AMC_LANG`, `AMC_
 
 <br>
 
-## 6. How AI is used here
+<p><a id="8-how-ai-is-used-here" href="#8-how-ai-is-used-here"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/assets/sections/8-how-ai-is-used-here-dark.svg"><img src=".github/assets/sections/8-how-ai-is-used-here.svg" alt="8. How AI is used here" width="100%"></picture></a></p>
 
 One knight builds this, and AI is one of the tools I work with, the same way I work with an editor or a compiler. It helps me write code and documentation and it checks my work, and that saves me a good many evenings. It does not make the decisions, though. I read and understand everything before it ships, and if something here breaks, that is on me and not on the tool.
 
@@ -163,24 +170,6 @@ You do not have to take my word for it. The code is open and every release note 
 
 <br>
 
-## 7. Support this project
-
 Questions, bugs, ideas or feature requests? Please [open a GitHub issue](https://github.com/junkerderprovinz/filebot/issues). A question about FileBot itself, its formats or its license is best asked in the [FileBot forum](https://www.filebot.net/forums/).
-
-A one-knight job: I build it, keep it running, work through the issues and add what people ask for, until nothing is missing. It is free, with no accounts, no telemetry, no ads and no paid tier. No asterisk anywhere. Nothing readable ever leaves your own walls. Forged on evenings and weekends, with heart and stubbornness.
-
-If it has earned a place on your server or computer, toss a coin to your knight: it helps cover the costs and keeps the project alive. It also makes this knight's heart beat a little faster. Three ways below, whichever suits you.
-
-<!-- give-buttons: written by scripts/gen_download_buttons.py -->
-<p align="center">
-  <a href="https://buymeacoffee.com/junkerderprovinz"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=074d32ddf165#svgView(viewBox(6062,0,841.9,245.3))" alt="Buy me a coffee" width="160" height="46.618"></a>
-  &nbsp;
-  <a href="https://www.paypal.com/donate/?hosted_button_id=76FVV52TKXTUS"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=074d32ddf165#svgView(viewBox(6928,0,841.9,245.3))" alt="PayPal" width="160" height="46.618"></a>
-  &nbsp;
-  <a href="https://junkerderprovinz.github.io/junkerderprovinz/"><img src="https://raw.githubusercontent.com/junkerderprovinz/filebot/main/.github/assets/download-buttons/buttons.svg?v=074d32ddf165#svgView(viewBox(7794,0,841.9,245.3))" alt="Donate with crypto" width="160" height="46.618"></a>
-</p>
-<!-- /give-buttons -->
-
-<br>
 
 <sub>[FileBot](https://www.filebot.net/) is commercial software by Reinhard Pointner, and this project is not affiliated with or endorsed by it. The FileBot name and logo belong to their owner and are used here only to name the application this image packages. The packaging here is AGPL-3.0; see [LICENSE](LICENSE) and [NOTICE](NOTICE) for the bundled software.</sub>
