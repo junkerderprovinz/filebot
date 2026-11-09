@@ -100,6 +100,14 @@ RUN set -eux; \
     grep -q '<application class="\*"><maximized>yes</maximized></application>' "$rc"; \
     sed -i 's|</applications>|  <application type="dialog"><maximized>no</maximized></application>\n  <application class="zenity"><maximized>no</maximized><size><width>1100</width><height>700</height></size><position force="yes"><x>center</x><y>center</y></position></application>\n  <application class="net-filebot-Main" type="normal"><decor>no</decor></application>\n</applications>|' "$rc"
 
+# The base serves the web client without a cache header, so browsers keep the
+# page for days and show a black "connecting" screen while the container is
+# stopped. no-cache makes every load ask the container first.
+RUN set -eux; \
+    conf=/defaults/default.conf; \
+    grep -q 'location SUBFOLDER {' "$conf"; \
+    sed -i 's|^\( *\)location SUBFOLDER {|&\n\1  add_header Cache-Control "no-cache" always;|' "$conf"
+
 # Init-log banner: single source at .github/assets/banner-raw.txt (CR stripped
 # so a Windows checkout can't break it). Also blank the base's own adduser
 # branding banner so the log shows only our print-banner.sh block.
