@@ -13,24 +13,26 @@ the generator scale marks of different widths to one optical size.
 Fonticons, Inc.
 
 **Dashboard Icons** (`homarr-labs/dashboard-icons`, <https://dashboardicons.com>):
-Unraid and Umbrel, Unraid's `unraid.svg` with the gradient left out, since the
-button draws it in one ink. **Apache-2.0**, whose licence text is beside this file as
-`LICENSE-dashboard-icons.txt`. Copyright the Homarr Labs team and contributors.
+Unraid, Umbrel and UGREEN, Unraid's `unraid.svg` with the gradient left out,
+since the button draws it in one ink. **Apache-2.0**, whose licence text is
+beside this file as `LICENSE-dashboard-icons.txt`. Copyright the Homarr Labs
+team and contributors.
 
 **MOS** from the `mos.svg` in mos-nas/mos-releases, and **ZimaOS** from the
 `zimaos-logo.svg` of its web interface.
 
-**Simple Icons** (<https://simpleicons.org>): TrueNAS, its `truenas.svg`.
+**Simple Icons** (<https://simpleicons.org>): Proxmox, Synology, QNAP and
+TrueNAS, from its `proxmox.svg`, `synology.svg`, `qnap.svg` and `truenas.svg`.
 **CC0 1.0** for the path data.
 
 ## Trademarks
 
-Every platform mark here is a trademark of its owner. They are used the one way a
-trademark may be used without permission, which is to refer to the thing they
+Every platform mark here is a trademark of its owner. They are used the one way
+a trademark may be used without permission, which is to refer to the thing they
 name: each sits on a button for that platform, unmodified, and nothing here
 claims endorsement by or affiliation with Docker, Lime Technology, MOS,
-IceWhale, Umbrel or iXsystems. The ZIP is no one's mark; it stands for the source
-archive.
+IceWhale, Umbrel, Proxmox, Synology, QNAP, UGREEN or iXsystems. The ZIP is no
+one's mark. It stands for the source archive.
 
 ## Adding one
 
